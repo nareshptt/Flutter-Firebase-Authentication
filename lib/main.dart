@@ -1,5 +1,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/Pages/checkUser.dart';
+
 import 'package:flutter_app/Pages/login.dart';
 import 'package:flutter_app/firebase_options.dart';
 
@@ -24,6 +26,6 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: loginPage());
+        home: CheckUser());
   }
 }
