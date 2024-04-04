@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app/Pages/UIHelper.dart';
 import 'package:flutter_app/Pages/home.dart';
 import 'package:flutter_app/Pages/login.dart';
+import 'package:flutter_app/Pages/phoneauth.dart';
 
 class signupPage extends StatefulWidget {
   const signupPage({super.key});
@@ -26,7 +27,7 @@ class _signupPageState extends State<signupPage> {
             .createUserWithEmailAndPassword(email: email, password: password)
             .then((value) {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => homePage()));
+              context, MaterialPageRoute(builder: (context) => phoneauth()));
         });
       } on FirebaseAuthException catch (ex) {
         return UIHelper.customAlert(context, ex.code.toString());
